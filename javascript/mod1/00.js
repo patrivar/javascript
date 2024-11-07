@@ -1,0 +1,1 @@
+console.log('Hello sinä, printtaan nyt ulkoisesta tiedostosta')
