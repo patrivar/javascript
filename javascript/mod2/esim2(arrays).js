@@ -144,3 +144,11 @@ const greet3 = (name) => {
 greet('Ulla');
 greet2('Ulla');
 greet3('Ulla')
+
+const nimi = 'Matti';
+
+function logName() {
+    console.log(nimi)
+}
+
+logName();
