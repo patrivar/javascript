@@ -111,14 +111,36 @@ console.log(duck);
 let moikkaus = ('Hei, olen ' + duck['name'] + '.');
 console.log(moikkaus);
 let moikkaus1 = ('Olen ' + duck['age'] +  ' vuoden ikäinen ja mottoni on ' + duck.profession + '!');
-console.log(moikkaus1)
+console.log(moikkaus1);
+
 
 const duck2 = {
     name: 'Aku',
     age: 40,
     getInfo: function(){
-        return this.name + ' on ' + this.age + '-vuotias.';
+        return this.name + ' on ' + this.age + '-vuotias.'
     }
+};
+console.log(duck2.getInfo());
+
+// JS funktiot
+
+// perinteinen funnktiomäärittely
+function greet(name) {
+    console.log(`Greetings ${name}!`)
+};
+
+// function expression. Funktio joka on anonyymi mutta tallennetaan muuttujaan.
+const greet2 =function(name) {
+    console.log(`Greetings again ${name}!`)
+};
+
+// arrow funktio / nuolifunktio, edellistä yksinkertaisempi ja lyhyempi
+
+const greet3 = (name) => {
+    console.log(`Greetings for a third time ${name}!`)
 }
 
-console.log(duck2.getInfo())
+greet('Ulla');
+greet2('Ulla');
+greet3('Ulla')
