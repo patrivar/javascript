@@ -121,4 +121,4 @@ const duck2 = {
     }
 }
 
-console.log(duck.getInfo())
+console.log(duck2.getInfo())
