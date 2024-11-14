@@ -36,15 +36,18 @@ const olElement = document.createElement('ol');
  */
 const listContents = ["kynä", "reppu", "pupetti"];
 const listDiv = document.querySelector('#list');
+
 function renderList(items) {
     listDiv.innerHTML = '';
     const olElement = document.createElement('ol');
     for (let i = 0; i < items.length; i++) {
         const newLi = document.createElement('li');
-        newLi.textContent = items[i]; olElement.append(newLi);
+        newLi.textContent = items[i];
+        olElement.append(newLi);
     }
     listDiv.append(olElement);
 }
+
 //renderList(listContents);
 listContents.push('tietskari');
 listContents.sort();
@@ -57,16 +60,17 @@ window.console.log(window.location.href);
 
 
 // Tapahtuman käsittelyy eli eventti
-const printButton  =  document.querySelector('#print')
+const printButton = document.querySelector('#print')
 console.log(printButton)
 // Asetetaan napille tapahtumankäsittelijä click-eventtille
 printButton.addEventListener('click', clickHandler);
+
 function clickHandler(event) {
     console.log('button clicked, event: ', event);
     renderList(listContents);
 };
 // Asioiden lisäys listalle
-const addButton  =  document.querySelector('#add')
+const addButton = document.querySelector('#add')
 console.log(addButton)
 // Asetetaan napille tapahtumankäsittelijä click-eventtille
 addButton.addEventListener('click', () => {
@@ -76,7 +80,7 @@ addButton.addEventListener('click', () => {
 });
 
 // Hiiritapahtumia
-document.addEventListener('mousemove', function(event) {
+document.addEventListener('mousemove', function (event) {
     //console.log(event);
     document.querySelector('#output').textContent = `Hiiren 
     osoittimen koordinaatit: ${event.clientX}, ${event.clientY}`;
@@ -86,7 +90,7 @@ document.addEventListener('mousemove', function(event) {
     }
 });
 
-h1Elem.addEventListener('mouseenter', function(event) {
+h1Elem.addEventListener('mouseenter', function (event) {
     // Piilotetaan elementti css:n avulla, kun hiiren osoitin menee sen päälle
     h1Elem.classList.add('hidden');
 });
@@ -94,7 +98,7 @@ h1Elem.addEventListener('mouseenter', function(event) {
 // Näppiseventti (h piilottaa ja näyttää koko sivun)
 const keyLog = []
 let hidden = false
-document.addEventListener('keypress', function(event) {
+document.addEventListener('keypress', function (event) {
     //console.log('Näppäin: ',event.key)
     keyLog.push(event.key);
     console.log('Logi', keyLog);
@@ -114,4 +118,3 @@ from.addEventListener('submit', function (event) {
     event.preventDefault()
     console.log(event)
 });
-
