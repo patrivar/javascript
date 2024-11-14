@@ -108,3 +108,10 @@ document.addEventListener('keypress', function(event) {
     }
 })
 
+// Estetään formin automaattinen  lähetys (sivun päivitys) esim kun käytössä on nappula send
+const form = document.querySelector('form')
+from.addEventListener('submit', function (event) {
+    event.preventDefault()
+    console.log(event)
+});
+
