@@ -6,7 +6,8 @@
 function rollDice() {
     return Math.floor(Math.random() * 6) + 1;
 }
-document.addEventListener('DOM', function() {
+
+document.addEventListener('DOMContentLoaded', function() {
     const ulElement = document.createElement('ul');
     document.body.appendChild(ulElement);
     let roll;
@@ -15,6 +16,5 @@ document.addEventListener('DOM', function() {
         const listItem = document.createElement('li');
         listItem.textContent = `Heitit: ${roll}`;
         ulElement.appendChild(listItem);
-    }
-    while (roll !== 6);
+    } while (roll !== 6);
 });
